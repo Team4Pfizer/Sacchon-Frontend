@@ -5,6 +5,15 @@ span{
 .menu{
     margin-left: auto;
  }
+ 
+.button{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: white;
+}
+.button:hover, .button:active{
+    color: lightgray;
+}
 
 .sacchon-image{
     height:95%;

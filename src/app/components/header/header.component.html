@@ -1,11 +1,18 @@
 <mat-toolbar color="primary" class="app-header">
     <img  src="https://user-images.githubusercontent.com/123155613/216784190-c3a519a4-e487-455d-b789-50632d43c196.png" class="sacchon-image"/>
-    <span>
-        <a href="/">Sacchon</a>
-    </span>
-    <a class='menu'>
-        <mat-icon class="button">menu</mat-icon>
-        <mat-icon class="button">face</mat-icon>
-    </a>
+    <div class="logo-container">
+        <span class="logo-text" href="/">Sacchon</span>
+    </div>
+    <div class='menu'>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-icon-button>
+            <mat-icon>face</mat-icon>
+        </button>
+    </div>
 </mat-toolbar>
-  

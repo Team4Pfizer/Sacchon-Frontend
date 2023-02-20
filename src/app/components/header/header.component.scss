@@ -4,38 +4,31 @@ span{
 
 .menu{
     margin-left: auto;
+
+    button{
+        margin-right: 1rem;
+        text-decoration: none;
+        color: white;
+        border-radius: 50%;
+    }
+
+    button:hover, button:active{
+        background-color: #2b262d;
+    }
  }
- 
-.button{
-    margin-right: 1rem;
-    text-decoration: none;
-    color: white;
-}
-.button:hover, .button:active{
-    color: lightgray;
-}
 
 .sacchon-image{
     height:95%;
     width:auto;
     border-radius: 50%;
     padding: 0.2%;
-}
-
-div.images{
-    text-align: center;
-    width:100% ;
-    height:100%;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-a:hover, a:active{
-    color: lightgray;
+    border: 0.2rem solid white;
 }
 
 .app-header{
     display: flex;
+    overflow: hidden;
+    padding: 10px 10px;
+    max-height: 101px;
+    background-color: #3648ab;
 }

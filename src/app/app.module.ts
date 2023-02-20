@@ -6,15 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from "@angular/material/toolbar";
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button'; 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

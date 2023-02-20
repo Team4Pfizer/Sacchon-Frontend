@@ -2,6 +2,10 @@ span{
   margin:1rem ; 
 }
 
+span:hover{
+    cursor: pointer;
+}
+
 .menu{
     margin-left: auto;
 
@@ -15,7 +19,7 @@ span{
     button:hover, button:active{
         background-color: #2b262d;
     }
- }
+}
 
 .sacchon-image{
     height:95%;
@@ -30,5 +34,6 @@ span{
     overflow: hidden;
     padding: 10px 10px;
     max-height: 101px;
-    background-color: #3648ab;
+    // background-color: #3648ab;
+    background-color: black;
 }

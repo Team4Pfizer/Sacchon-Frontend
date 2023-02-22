@@ -1,9 +1,11 @@
 span{
   margin:1rem ; 
+  color: #0100be;
 }
 
 span:hover{
     cursor: pointer;
+    color: #4c4c4c;
 }
 
 .menu{
@@ -12,21 +14,32 @@ span:hover{
     button{
         margin-right: 1rem;
         text-decoration: none;
-        color: white;
-        border-radius: 50%;
+        color: #0100be;
+        border-radius: 40%;
     }
 
     button:hover, button:active{
-        background-color: #2b262d;
+        background-color: #bbbbbb;
     }
+}
+
+::ng-deep .menu-items{
+    background: #eeeeee;
+}
+
+::ng-deep .menu-items .mat-menu-item{
+    color: #0100be;
+}
+
+::ng-deep .menu-items .mat-menu-item:hover{
+    background-color: #bbbbbb;
 }
 
 .sacchon-image{
     height:95%;
     width:auto;
     border-radius: 50%;
-    padding: 0.2%;
-    border: 0.2rem solid white;
+    padding: 0.5%;
 }
 
 .app-header{
@@ -34,6 +47,6 @@ span:hover{
     overflow: hidden;
     padding: 10px 10px;
     max-height: 101px;
-    // background-color: #3648ab;
-    background-color: black;
+    background-color: #eeeeee;
+    box-shadow: #2b262d 0px 0px 10px 0px;
 }

@@ -7,9 +7,9 @@
         <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
-        <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
+        <mat-menu #menu="matMenu" xPosition="before" class="menu-items">
+            <button mat-menu-item class="menu-item">Profile</button>
+            <button mat-menu-item class="menu-item">Account Settings</button>
         </mat-menu>
         <button mat-icon-button>
             <mat-icon>face</mat-icon>

@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
+import { DciStoreComponent } from './components/dci-store/dci-store.component';
 
 
 
@@ -27,7 +28,8 @@ import { MatTableModule } from '@angular/material/table';
     AppComponent,
     HeaderComponent,
     LandingPageComponent,
-    BglStoreComponent
+    BglStoreComponent,
+    DciStoreComponent
   ],
   imports: [
     BrowserModule,

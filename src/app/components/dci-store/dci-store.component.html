@@ -1,0 +1,19 @@
+<div class="form-container">
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <h2>Enter your daily carbonates intake.</h2>
+      <mat-form-field appearance="outline">
+        <input matInput type="date" placeholder="start date" formControlName="date">
+        <mat-error *ngIf="createForm.get('date')?.hasError('required')">This field is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>daily carbonates in grams</mat-label>
+        <input matInput formControlName="dci" type="number">
+        <mat-error *ngIf="createForm.get('dci')?.hasError('required')">This field is required</mat-error>
+        <mat-error *ngIf="createForm.get('dci')?.hasError('min') || createForm.get('dci')?.hasError('max')">Please enter a number between 0 and 1000</mat-error>
+      </mat-form-field>
+      <button mat-stroked-button type="submit" [disabled]="!createForm.valid">Submit <mat-icon>chevron_right</mat-icon></button>
+      <button mat-stroked-button type="button" routerLink="/" routerLinkActive>Cancel <mat-icon>cancel</mat-icon></button>
+      <h4 *ngIf="submitted">Thank you. Your data has been submitted.</h4>
+      <button *ngIf="submitted" mat-stroked-button type="button" routerLink="/landing-page" routerLinkActive>Home <mat-icon>home</mat-icon></button>
+    </form>
+  </div>

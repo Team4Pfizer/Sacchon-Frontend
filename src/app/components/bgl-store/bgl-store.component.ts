@@ -23,17 +23,13 @@ export class BglStoreComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.createForm = this.fb.group({
-    //   name: new FormControl('', [Validators.required]),
-    //   job: new FormControl('', [Validators.required, Validators.minLength(3)])
-    // });
   }
 
   onSubmit() {
     this.submitted = true;
     const data = {
-      name: this.createForm.get('name')!.value,
-      job: this.createForm.get('job')!.value
+      datetime: this.createForm.get('datetime')!.value,
+      bgl: this.createForm.get('bgl')!.value
     };
   }
 

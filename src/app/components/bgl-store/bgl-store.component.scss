@@ -20,7 +20,7 @@ form{
 }
 
 ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: red!important;
+    color: darkblue !important;
 }
 
 ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
@@ -29,6 +29,7 @@ form{
 
 button{
     color: #0100be; 
+    margin-top: 1%;
 }
 
 button:hover{
@@ -36,6 +37,7 @@ button:hover{
     background-color: #e6e6e6;
 }
 
-
-
-
+h4{
+    color: darkblue;
+    margin-top: 2%;
+}

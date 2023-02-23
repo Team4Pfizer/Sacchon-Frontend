@@ -1,27 +1,20 @@
 <div class="form-container">
   <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <h2>Enter your blood glucose level.</h2>
     <mat-form-field appearance="outline">
-      <mat-label>Input</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Choose a date</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-hint>MM/DD/YYYY</mat-hint>
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>        
-    <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input matInput formControlName="name" name="name" type="text" required>
-      <mat-error *ngIf="createForm.value.name">Password must be a combination of lower-case, upper-case, numbers and at least 9 characters long</mat-error>
+      <input matInput type="datetime-local" placeholder="start date" formControlName="datetime">
+      <mat-error *ngIf="createForm.get('datetime')?.hasError('required')">This field is required</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>blood glucose in mg/dL</mat-label>
-      <input matInput formControlName="job" name="job" type="number">
-      <mat-error *ngIf="createForm.get('job')?.hasError('required')">This field is required</mat-error>
+      <input matInput formControlName="bgl" type="number">
+      <mat-error *ngIf="createForm.get('bgl')?.hasError('required')">This field is required</mat-error>
+      <mat-error *ngIf="createForm.get('bgl')?.hasError('min') || createForm.get('bgl')?.hasError('max')">Please enter a number between 0 and 1000</mat-error>
     </mat-form-field>
-    <button mat-stroked-button type="submit" [disabled]="!createForm.valid">Submit<mat-icon>chevron_right</mat-icon></button>
+    <button mat-stroked-button type="submit" [disabled]="!createForm.valid">Submit <mat-icon>chevron_right</mat-icon></button>
+    <button mat-stroked-button type="button" routerLink="/" routerLinkActive>Cancel <mat-icon>cancel</mat-icon></button>
+    <h4 *ngIf="submitted">Thank you. Your data has been submitted.</h4>
+    <button *ngIf="submitted" mat-stroked-button type="button" routerLink="/landing-page" routerLinkActive>Home <mat-icon>home</mat-icon></button>
   </form>
 </div>
 

@@ -20,6 +20,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { DciStoreComponent } from './components/dci-store/dci-store.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import {MatTabsModule} from '@angular/material/tabs'
 
 
 
@@ -29,7 +31,8 @@ import { DciStoreComponent } from './components/dci-store/dci-store.component';
     HeaderComponent,
     LandingPageComponent,
     BglStoreComponent,
-    DciStoreComponent
+    DciStoreComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { DciStoreComponent } from './components/dci-store/dci-store.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,10 +8,10 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu" xPosition="before" class="menu-items">
-            <button mat-menu-item class="menu-item">Profile</button>
+            <button mat-menu-item class="menu-item">Add measurements</button>
             <button mat-menu-item class="menu-item">Account Settings</button>
         </mat-menu>
-        <button mat-icon-button>
+        <button mat-icon-button  (click)="goToProfile()">
             <mat-icon>face</mat-icon>
         </button>
     </div>

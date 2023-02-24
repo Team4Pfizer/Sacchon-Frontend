@@ -40,3 +40,15 @@ export interface Consultation{
     consultationDate: string;
 }
 
+
+export interface BgMeasurementPost{
+    bgMeasurementData: number;
+    bgMeasurementDate: string;
+    bgMeasurementTime: string;
+}
+
+export interface DciMeasurementPost{
+    dciMeasurementData: number;
+    dciMeasurementDate: string;
+}
+

@@ -1,5 +1,78 @@
+<div class="heading">
+    <h2>Profile</h2>
+</div>
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
-    <mat-tab label="Doctor consulations"> Doctor consulations </mat-tab>
-    <mat-tab label="Blood glucose level measurements"> Blood glucose level measurements </mat-tab>
-    <mat-tab label="Daily carbonates intake measurements"> Daily carbonates intake measurements </mat-tab>
+    <mat-tab label="Doctor consulations"> 
+        <table mat-table [dataSource]="consultations" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.consultationId}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="dosage">
+                <th mat-header-cell *matHeaderCellDef> Dosage </th>
+                <td mat-cell *matCellDef="let element"> {{element.consultationDosage}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="medication">
+                <th mat-header-cell *matHeaderCellDef> Medication </th>
+                <td mat-cell *matCellDef="let element"> {{element.consultationMedication}} </td>
+              </ng-container>
+            
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.consultationDate}} </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsConsultations"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsConsultations;"></tr>
+        </table>
+    </mat-tab>
+    <mat-tab label="Blood glucose level measurements">  
+        <table mat-table [dataSource]="bgMeasurements" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.bgMeasurementId}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="data">
+                <th mat-header-cell *matHeaderCellDef> Data </th>
+                <td mat-cell *matCellDef="let element"> {{element.bgMeasurementData}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.bgMeasurementDate}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef> Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.bgMeasurementTime}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsBgMeasurements"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsBgMeasurements;"></tr>
+        </table>
+    </mat-tab>
+    <mat-tab label="Daily carbonates intake measurements">
+        <table mat-table [dataSource]="dciMeasurements" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.dciMeasurementId}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="data">
+                <th mat-header-cell *matHeaderCellDef> Data </th>
+                <td mat-cell *matCellDef="let element"> {{element.dciMeasurementData}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.dciMeasurementDate}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsDciMeasurements"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsDciMeasurements;"></tr>
+        </table>
+    </mat-tab>
 </mat-tab-group>  

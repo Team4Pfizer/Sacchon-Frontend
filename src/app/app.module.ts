@@ -23,6 +23,8 @@ import { DciStoreComponent } from './components/dci-store/dci-store.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MatTabsModule } from '@angular/material/tabs'
 import { HttpClientModule } from '@angular/common/http';
+import { AccountComponent } from './components/account/account.component';
+import {MatGridListModule} from '@angular/material/grid-list'; 
 
 
 
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     LandingPageComponent,
     BglStoreComponent,
     DciStoreComponent,
-    ProfileComponent
+    ProfileComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatNativeDateModule,
     MatTableModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

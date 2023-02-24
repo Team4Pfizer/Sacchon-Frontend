@@ -10,7 +10,7 @@ export interface Patient{
     patientId: number;
     patientFirstName: string;
     patientLastName: string;
-    patientEmail: string;
+    patientEmailId: string;
 }
 
 export interface Doctor{

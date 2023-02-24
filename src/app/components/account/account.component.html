@@ -1,0 +1,18 @@
+<mat-card class="patient-info">
+   <mat-card-header>
+        <mat-card-title>Patient Information</mat-card-title>
+        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+        <mat-grid-list cols="2" rowHeight="4:1">
+            <mat-grid-tile>First Name</mat-grid-tile>
+            <mat-grid-tile>{{patientData.patient.patientFirstName}}</mat-grid-tile>
+            <mat-grid-tile>Last Name</mat-grid-tile>
+            <mat-grid-tile>{{patientData.patient.patientLastName}}</mat-grid-tile>
+            <mat-grid-tile>Email</mat-grid-tile>
+            <mat-grid-tile>{{patientData.patient.patientEmailId}}</mat-grid-tile>
+            <mat-grid-tile>Doctor</mat-grid-tile>
+            <mat-grid-tile>{{patientData.patientsDoctor.doctorFirstName}} {{patientData.patientsDoctor.doctorLastName}}</mat-grid-tile>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>

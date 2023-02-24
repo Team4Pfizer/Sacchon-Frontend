@@ -8,7 +8,8 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu" xPosition="before" class="menu-items">
-            <button mat-menu-item class="menu-item">Add measurements</button>
+            <button mat-menu-item class="menu-item" (click)="gotTo('bgl-store')">Add blood glucose measurement</button>
+            <button mat-menu-item class="menu-item" (click)="gotTo('dci-store')">Add daily carbonates intake</button>
             <button mat-menu-item class="menu-item">Account Settings</button>
         </mat-menu>
         <button mat-icon-button  (click)="goToProfile()">

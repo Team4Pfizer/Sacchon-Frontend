@@ -17,4 +17,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/profile']);
   }
 
+  gotTo(target: string) {
+    target = '/' + target;
+    this.router.navigate([target]);
+  }
+
 }

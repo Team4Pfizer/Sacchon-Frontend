@@ -27,30 +27,26 @@ export class ProfileComponent implements OnInit {
       this.patientData = data;
       this.bgMeasurements.data = data.bgMeasurementList;
       this.dciMeasurements.data = data.dciMeasurementList;
-      console.log(data);
     });
 
     this.patientService.getConsultations('michael.lawson@gmail.com').subscribe(data => {
       this.consultations.data = data;
-      console.log(data);
     });
   }
 
   deleteMeasurement(measurementId: number, measurementType: string, patientEmailID: string, index: number) {
     if (measurementType === 'bg') {
       this.deleteDataService.deleteBgMeasurement(measurementId, patientEmailID).subscribe(data => {
-        console.log(data);
       });
       this.bgMeasurements.data.splice(index, 1);
       this.bgMeasurements._updateChangeSubscription();
     }
     else {
       this.deleteDataService.deleteDciMeasurement(measurementId, patientEmailID).subscribe(data => {
-        console.log(data);
       });
-    }
-    this.dciMeasurements.data.splice(index, 1);
+      this.dciMeasurements.data.splice(index, 1);
     this.dciMeasurements._updateChangeSubscription();
+    }
   }
 
 }

@@ -1,4 +1,33 @@
 h1{
-    margin-top: 2%;
+    margin-top: 8%;
+    margin-bottom: 2;
     text-align: center;
+}
+
+h2{
+    margin-top: 8%;
+    text-align: center;
+}
+
+
+mat-grid-list{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+mat-grid-tile{
+    background-color: #0195ff;
+    border-radius: 2%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+mat-grid-tile:hover{
+    background-color: lightgray;
+    cursor: pointer;
 }

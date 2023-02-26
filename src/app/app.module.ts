@@ -25,6 +25,7 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -56,7 +57,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTableModule,
     MatTabsModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

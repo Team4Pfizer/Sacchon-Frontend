@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" class="app-header">
     <img  src="https://user-images.githubusercontent.com/123155613/216784190-c3a519a4-e487-455d-b789-50632d43c196.png" class="sacchon-image"/>
     <div class="logo-container">
-        <span class="logo-text" routerLink="/" title="Home">Sacchon</span>
+        <span class="logo-text" routerLink="/" matTooltip="Home">Sacchon</span>
     </div>
     <div class='menu'>
-        <button mat-icon-button [matMenuTriggerFor]="menu" title="Menu">
+        <button mat-icon-button matTooltip="Menu" [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu" xPosition="before" class="menu-items">
@@ -12,7 +12,7 @@
             <button mat-menu-item class="menu-item" (click)="gotTo('dci-store')">Add daily carbonates intake</button>
             <button mat-menu-item class="menu-item" (click)="gotTo('account')">Account Information</button>
         </mat-menu>
-        <button mat-icon-button  (click)="goToProfile()" title="Profile">
+        <button mat-icon-button  (click)="goToProfile()" matTooltip="View Profile">
             <mat-icon>face</mat-icon>
         </button>
     </div>

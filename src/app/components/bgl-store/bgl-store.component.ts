@@ -43,27 +43,18 @@ export class BglStoreComponent implements OnInit {
       bgMeasurementData: data.bgl,
       bgMeasurementDate: date,
       bgMeasurementTime: time
-    }
+    };
 
     this.PostDataService.postBgMeasurementData(bgMeasurementPost, 'michael.lawson@gmail.com').subscribe({
       next: res => this.response = res,
     });
   }
 
-  get name(){
-    return this.createForm.get('name');
+  get datetime(){
+    return this.createForm.get('datetime');
   }
 
-  get job(){
-    return this.createForm.get('job');
+  get bgl(){
+    return this.createForm.get('bgl');
   }
-
-  hasError(controlName: string, errorName: string) {
-
-  }
-
-  onCancel(){
-    
-  }
-
 }

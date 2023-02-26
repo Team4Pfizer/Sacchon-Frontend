@@ -1,4 +1,3 @@
-import { DciMeasurement } from './../../Interfaces';
 import { PostDataService } from './../../services/post-data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
@@ -27,8 +26,8 @@ export class DciStoreComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     const dciMeasurement: DciMeasurementPost = {
-      dciMeasurementData: this.createForm.get('date')!.value,
-      dciMeasurementDate: this.createForm.get('dci')!.value
+      dciMeasurementData: this.createForm.get('dci')!.value,
+      dciMeasurementDate: this.createForm.get('date')!.value
     };
 
     this.PostDataService.postDciMeasurementData(dciMeasurement, 'michael.lawson@gmail.com').subscribe({

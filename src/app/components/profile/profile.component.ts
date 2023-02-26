@@ -3,6 +3,7 @@ import { PatientData, BgMeasurement, DciMeasurement, Consultation } from './../.
 import { PatientDataHandlingService } from './../../services/patient-data-handling.service';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-profile',
@@ -20,7 +21,8 @@ export class ProfileComponent implements OnInit {
   displayedColumnsDciMeasurements: string[] = ['id', 'data', 'date', 'delete'];
 
 
-  constructor(private patientService: PatientDataHandlingService, private deleteDataService: DeleteDataService) { }
+  constructor(private patientService: PatientDataHandlingService, private deleteDataService: DeleteDataService,
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.patientService.getPatientData('michael.lawson@gmail.com').subscribe(data => {
@@ -49,4 +51,31 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  openDialog(measurementId: number, measurementType: string, patientEmailID: string, index: number): void {
+    const dialogRef = this.dialog.open(DialogConfirmDialog, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result) {
+        this.deleteMeasurement(measurementId, measurementType, patientEmailID, index);
+      }
+    });
+  }
+
+}
+
+
+
+@Component({
+  selector: 'dialog-confirm-dialog',
+  templateUrl: 'dialog-confirm-dialog.html',
+  styleUrls: ['./profile.component.scss']
+})
+export class DialogConfirmDialog {
+  constructor(public dialogRef: MatDialogRef<DialogConfirmDialog>) {}
+
+  onConfirm(): void {
+    this.dialogRef.close(true);
+  }
 }

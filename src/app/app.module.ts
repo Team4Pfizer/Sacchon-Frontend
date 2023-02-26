@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -58,7 +59,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTabsModule,
     HttpClientModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

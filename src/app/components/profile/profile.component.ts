@@ -1,3 +1,4 @@
+import { DialogComponent } from './../dailog/dailog.component';
 import { DeleteDataService } from './../../services/delete-data.service';
 import { PatientData, BgMeasurement, DciMeasurement, Consultation } from './../../Interfaces';
 import { PatientDataHandlingService } from './../../services/patient-data-handling.service';
@@ -52,9 +53,7 @@ export class ProfileComponent implements OnInit {
   }
 
   openDialog(measurementId: number, measurementType: string, patientEmailID: string, index: number): void {
-    const dialogRef = this.dialog.open(DialogConfirmDialog, {
-      width: '250px'
-    });
+    const dialogRef = this.dialog.open(DialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
@@ -63,19 +62,4 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-}
-
-
-
-@Component({
-  selector: 'dialog-confirm-dialog',
-  templateUrl: 'dialog-confirm-dialog.html',
-  styleUrls: ['./profile.component.scss']
-})
-export class DialogConfirmDialog {
-  constructor(public dialogRef: MatDialogRef<DialogConfirmDialog>) {}
-
-  onConfirm(): void {
-    this.dialogRef.close(true);
-  }
 }

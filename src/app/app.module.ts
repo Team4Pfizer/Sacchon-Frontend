@@ -24,8 +24,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MatTabsModule } from '@angular/material/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list'; 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './components/dailog/dailog.component';
 
 
 
@@ -37,7 +39,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BglStoreComponent,
     DciStoreComponent,
     ProfileComponent,
-    AccountComponent
+    AccountComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTabsModule,
     HttpClientModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
